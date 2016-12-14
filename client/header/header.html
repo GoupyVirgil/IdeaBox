@@ -1,0 +1,23 @@
+<template name="header_template">
+    <header class="header_header">
+        <div class="header_settings">
+            <div id="logout" class="header_logOff">
+                <img class="header_logOff-img" src="img/logoff.png" alt="">
+            </div>
+            <div class="header_profil">
+                <img class="header_profil-img img-rounded" src="img/profil.jpg" alt="">
+            </div>
+            <div class="header_hello">
+                <p class="header_hello-content">
+                    Bonjour <span>{{current_user.name}} </span>!
+                </p>
+            </div>
+        </div> <!-- FIN HEADER SETTINGS -->
+        <div class="header_title">
+            <h1 class="header_title-content">
+                La boîte à idée de <span>Mr Priou</span>
+            </h1>
+            <div class="header_title-underline"></div>
+        </div>
+    </header>
+</template>

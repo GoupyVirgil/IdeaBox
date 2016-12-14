@@ -1,0 +1,44 @@
+<template name="comment_template">
+    {{>header_template}}
+    <div class="mainContainer">
+        {{#each all_post}}
+            <section class="idea">
+                <div class="idea_profil">
+                    <img src="img/profil.jpg" alt="" class="idea_profil-photo img-rounded-big">
+                    <p class="idea_profil-name">
+                        <span>{{author.name}}</span>
+                    </p>
+                </div>
+                <div class="idea_mainContent">
+                    <div class="idea_content">
+                        <p class="idea_content-text">
+                            {{message}}
+                        </p>
+                        <div class="idea_content-more">
+                            <div class="idea_content-more_likes idea_content-count">
+								<span class="idea_content-icon">
+									<img src="img/like.png" alt="" class="likes" id="like" data-id="{{postId}}">
+								</span>
+                                <p class="idea_content-iconText"><a class="link_likes" href="">{{likes}} like{{#if severalLikes}}s{{/if}}</a></p>
+                            </div>
+                            <div class="idea_content-more_comments idea_content-count">
+								<span class="idea_content-icon">
+									<img src="img/comment.png" alt="" class="comments">
+								</span>
+                                <p class="idea_content-iconText"><a class="link_comm" href="">{{comment}} com{{#if severalComments}}s{{/if}}</a></p>
+                            </div>
+                            <div class="idea_content-more_hour idea_content-count">
+                                {{createdAt}}
+                            </div>
+                        </div>
+                    </div>
+                    {{>comment_area_template}}
+                </div>
+            </section>
+        {{/each}}
+        {{>add_comment_template}}
+    </div>
+    {{#if popup_is_open}}
+        {{>comment_popup_template}}
+    {{/if}}
+</template>

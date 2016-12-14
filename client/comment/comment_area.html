@@ -1,0 +1,21 @@
+<template name="comment_area_template">
+    <div class="commentsArea" id="commentArea" data-postId ="{{postId}}">
+    {{#each coms}}
+        <div class="commentsArea_old">
+            <div class="commentsArea_old-photo">
+                <img class="img-rounded" src="img/profil.jpg" alt="">
+            </div>
+                <div class="commentsArea_old-Text">
+                <div class="commentsArea_old-about">
+                    <p>{{author.username}}</p>
+                </div>
+                <div class="commentsArea_old-content">
+                    <p>{{comment}}</p>
+                </div>
+            </div>
+        </div>
+        <hr>
+    {{/each}}
+    {{>add_com_template}}
+    </div>
+</template>

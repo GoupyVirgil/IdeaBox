@@ -1,0 +1,30 @@
+<template name="registration_template">
+    <div class="mainContainer_connexion">
+        <div class="container_left">
+            <div class="container_left-content">
+                <header>
+                    <div class="header_title">
+                        <h1 class="header_title-content">
+                            La boîte à idée de <span>Mr Priou</span>
+                        </h1>
+                        <div class="header_title-underline"></div>
+                    </div>
+                </header>
+                <div class="form">
+                    <div class="form_connexion">
+                        <input type="email" placeholder="Adresse e-mail" id="email">
+                        <input type="text" placeholder="Nom d'utilisateur" id="firstname">
+                        <input type="password" placeholder="Mot de passe" id="password">
+                        <a href="" id="registration" class="btn_connexion">Inscription</a>
+                    </div>
+                    <a href="" id="login">Se connecter</a>
+                    {{>error_template}}
+                </div>
+            </div>
+        </div>
+        <div class="container_right">
+            <div class="container_right-content"></div>
+        </div>
+    </div>
+</template>
+
